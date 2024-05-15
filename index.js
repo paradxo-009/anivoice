@@ -44,7 +44,9 @@ function sendRandomAudioFromCategory(res, category) {
         });
     });
 }
-
+app.get('/', (req, res) => {
+  res.send('anime voice api');
+});
 app.get('/kshitiz/:category', (req, res) => {
     const category = req.params.category.toLowerCase();
     if (!categories.includes(category)) {
